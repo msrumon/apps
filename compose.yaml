@@ -1,0 +1,7 @@
+services:
+  1-beginner-bin2dec-1001:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/1-beginner-bin2dec-1001.dockerfile
+    ports:
+      - 1001:4173
