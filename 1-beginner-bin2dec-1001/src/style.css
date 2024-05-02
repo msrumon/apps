@@ -33,10 +33,11 @@ body {
   @apply mt-16;
   @apply border;
   @apply rounded-full;
-  @apply relative;
-  @apply dark:border-white;
+  @apply border-zinc-900;
+  @apply dark:border-zinc-100;
   @apply px-12;
   @apply py-6;
+  @apply relative;
 }
 
 .wrapper__title {
@@ -61,6 +62,8 @@ body {
   @apply text-lg;
   @apply rounded-full;
   @apply text-center;
+  @apply bg-gray-300;
+  @apply text-gray-700;
   @apply dark:bg-gray-700;
   @apply dark:text-gray-100;
 }
@@ -68,6 +71,7 @@ body {
 .wrapper__error {
   @apply hidden;
   @apply mt-2;
+  @apply text-pink-600;
   @apply dark:text-pink-400;
   @apply text-center;
 }
@@ -82,6 +86,8 @@ body {
   @apply focus-visible:outline-none;
   @apply focus:ring;
   @apply focus-visible:ring;
+  @apply focus:ring-gray-600;
+  @apply focus-visible:ring-gray-600;
   @apply focus:dark:ring-gray-500;
   @apply focus-visible:dark:ring-gray-500;
   @apply [&::-webkit-inner-spin-button]:appearance-none;
