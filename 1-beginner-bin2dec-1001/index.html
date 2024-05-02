@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Number Converter</title>
+  </head>
+  <body x-data="app">
+    <h1 class="title">Number Converter</h1>
+    <h2 class="subtitle">Binary to Decimal</h2>
+    <section class="wrapper">
+      <label for="input" class="wrapper__title">Input</label>
+      <input
+        type="number"
+        id="input"
+        class="wrapper__display wrapper__display--input"
+        x-model="input"
+        x-on:input="convert"
+      />
+      <span
+        class="wrapper__error"
+        x-bind:class="!error || 'wrapper__error--error'"
+        x-text="error"
+      ></span>
+    </section>
+    <section class="wrapper">
+      <span class="wrapper__title">Output</span>
+      <p class="wrapper__display wrapper__display--output" x-text="output">
+        --
+      </p>
+    </section>
+    <script type="module" src="/src/script.ts"></script>
+  </body>
+</html>
