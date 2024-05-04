@@ -1,0 +1,15 @@
+services:
+  app:
+    image: node:lts-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - 1042:5173
+    command: npm run dev -- --host
+  npm:
+    image: node:lts-alpine
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: npm

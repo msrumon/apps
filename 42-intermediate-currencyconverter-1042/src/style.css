@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply container;
+  @apply mx-auto;
+  @apply bg-zinc-100;
+  @apply text-zinc-900;
+  @apply dark:bg-zinc-900;
+  @apply dark:text-zinc-100;
+}
+
+button {
+  @apply bg-slate-300;
+  @apply hover:bg-slate-400;
+  @apply dark:bg-slate-600;
+  @apply dark:hover:bg-slate-700;
+  @apply transition-colors;
+  @apply rounded;
+}
+
+.title {
+  @apply font-bold;
+  @apply text-center;
+  @apply text-4xl;
+  @apply mt-8;
+}
+
+.preloader,
+.template {
+  @apply w-80;
+  @apply mx-auto;
+  @apply mt-8;
+}
+
+.preloader {
+  @apply text-xl;
+  @apply text-center;
+}
+
+.template aside {
+  @apply my-8;
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+  @apply gap-4;
+}
+
+.template aside span {
+  @apply text-xs;
+}
+
+.template aside button {
+  @apply bg-transparent;
+  @apply border-2;
+  @apply border-slate-300;
+  @apply hover:bg-slate-400;
+  @apply dark:border-slate-500;
+  @apply dark:hover:bg-slate-600;
+  @apply px-2;
+  @apply py-1;
+  @apply rounded-full;
+}
+
+.form {
+  @apply space-y-8;
+}
+
+.form__input {
+  @apply border;
+  @apply rounded;
+  @apply border-zinc-900;
+  @apply dark:border-zinc-100;
+  @apply px-2;
+  @apply py-1;
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+}
+
+.form__input label {
+  @apply font-semibold;
+}
+
+.form__input input {
+  @apply w-full;
+  @apply h-8;
+  @apply text-base;
+  @apply text-center;
+  @apply bg-gray-300;
+  @apply text-gray-700;
+  @apply dark:bg-gray-700;
+  @apply dark:text-gray-300;
+  @apply rounded;
+  @apply focus:outline-none;
+  @apply focus-visible:outline-none;
+  @apply focus:ring;
+  @apply focus-visible:ring;
+  @apply focus:ring-gray-400;
+  @apply focus-visible:ring-gray-400;
+  @apply focus:dark:ring-gray-600;
+  @apply focus-visible:dark:ring-gray-600;
+}
+
+.form__input input[type='number'] {
+  @apply [&::-webkit-inner-spin-button]:appearance-none;
+  @apply [&::-webkit-outer-spin-button]:appearance-none;
+}
+
+.form__input datalist {
+  @apply w-full;
+}
+
+.form__group {
+  @apply flex;
+  @apply justify-between;
+  @apply items-center;
+  @apply gap-2;
+}
+
+.form__group .form__input {
+  @apply w-32;
+}
+
+.form__group button {
+  @apply w-8;
+  @apply h-8;
+  @apply rounded-full;
+}
+
+.form button[type='submit'] {
+  @apply block;
+  @apply mx-auto;
+  @apply px-4;
+  @apply py-2;
+  @apply disabled:bg-slate-400;
+  @apply disabled:text-zinc-600;
+  @apply disabled:dark:bg-slate-700;
+  @apply disabled:dark:text-zinc-500;
+  @apply disabled:cursor-not-allowed;
+}
+
+.error,
+.result {
+  @apply mt-8;
+  @apply text-center;
+  @apply text-lg;
+}
+
+.error {
+  @apply text-rose-600;
+  @apply dark:text-rose-400;
+}
+
+.result {
+  @apply text-teal-600;
+  @apply dark:text-teal-400;
+}

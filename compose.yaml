@@ -5,3 +5,9 @@ services:
       dockerfile: ./dockerfiles/1-beginner-bin2dec-1001.dockerfile
     ports:
       - 1001:4173
+  42-intermediate-currencyconverter-1042:
+    build:
+      context: .
+      dockerfile: ./dockerfiles/42-intermediate-currencyconverter-1042.dockerfile
+    ports:
+      - 1042:4173
