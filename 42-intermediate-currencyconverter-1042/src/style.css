@@ -99,8 +99,8 @@ button {
   @apply focus-visible:ring;
   @apply focus:ring-gray-400;
   @apply focus-visible:ring-gray-400;
-  @apply focus:dark:ring-gray-600;
-  @apply focus-visible:dark:ring-gray-600;
+  @apply dark:focus:ring-gray-600;
+  @apply dark:focus-visible:ring-gray-600;
 }
 
 .form__input input[type='number'] {
@@ -136,8 +136,8 @@ button {
   @apply py-2;
   @apply disabled:bg-slate-400;
   @apply disabled:text-zinc-600;
-  @apply disabled:dark:bg-slate-700;
-  @apply disabled:dark:text-zinc-500;
+  @apply dark:disabled:bg-slate-700;
+  @apply dark:disabled:text-zinc-500;
   @apply disabled:cursor-not-allowed;
 }
 

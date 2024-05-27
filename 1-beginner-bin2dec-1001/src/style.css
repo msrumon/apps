@@ -84,8 +84,8 @@ body {
   @apply focus-visible:ring;
   @apply focus:ring-gray-600;
   @apply focus-visible:ring-gray-600;
-  @apply focus:dark:ring-gray-500;
-  @apply focus-visible:dark:ring-gray-500;
+  @apply dark:focus:ring-gray-500;
+  @apply dark:focus-visible:ring-gray-500;
   @apply [&::-webkit-inner-spin-button]:appearance-none;
   @apply [&::-webkit-outer-spin-button]:appearance-none;
 }
