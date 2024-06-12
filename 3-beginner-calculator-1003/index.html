@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>Calculator</title>
+    <script type="module" src="/src/script.ts" defer></script>
+  </head>
+  <body x-data="app">
+    <h1 class="title">Calculator</h1>
+    <h2 class="subtitle">Standard Calculator</h2>
+    <section class="box">
+      <div class="box__box">
+        <ul class="box__buffer">
+          <template x-for="b of buffer">
+            <li x-text="b"></li>
+          </template>
+        </ul>
+        <span class="box__display" x-text="display">0</span>
+      </div>
+      <button
+        class="box__button"
+        x-on:click="cancel"
+        x-on:keyup.escape.document="cancel"
+      >
+        &#67;
+      </button>
+      <button class="box__button" disabled></button>
+      <button class="box__button" disabled></button>
+      <button
+        class="box__button"
+        x-on:click="action('÷')"
+        x-on:keyup.slash.document="action('÷')"
+      >
+        &divide;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('7')"
+        x-on:keyup.7.document="type('7')"
+      >
+        &#55;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('8')"
+        x-on:keyup.8.document="type('8')"
+      >
+        &#56;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('9')"
+        x-on:keyup.9.document="type('9')"
+      >
+        &#57;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="action('x')"
+        x-on:keyup.*.document="action('x')"
+      >
+        &times;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('4')"
+        x-on:keyup.4.document="type('4')"
+      >
+        &#52;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('5')"
+        x-on:keyup.5.document="type('5')"
+      >
+        &#53;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('6')"
+        x-on:keyup.6.document="type('6')"
+      >
+        &#54;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="action('-')"
+        x-on:keyup.-.document="action('-')"
+      >
+        &minus;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('1')"
+        x-on:keyup.1.document="type('1')"
+      >
+        &#49;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('2')"
+        x-on:keyup.2.document="type('2')"
+      >
+        &#50;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('3')"
+        x-on:keyup.3.document="type('3')"
+      >
+        &#51;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="action('+')"
+        x-on:keyup.+.document="action('+')"
+      >
+        &plus;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="backspace"
+        x-on:keyup.backspace.document="backspace"
+      >
+        &larr;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('0')"
+        x-on:keyup.0.document="type('0')"
+      >
+        &#48;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="type('.')"
+        x-on:keyup.period.document="type('.')"
+      >
+        &period;
+      </button>
+      <button
+        class="box__button"
+        x-on:click="calculate"
+        x-on:keyup.enter.document="calculate"
+      >
+        &equals;
+      </button>
+    </section>
+  </body>
+</html>

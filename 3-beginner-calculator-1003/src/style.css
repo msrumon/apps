@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply container;
+  @apply mx-auto;
+  @apply bg-zinc-100;
+  @apply text-zinc-900;
+  @apply dark:bg-zinc-900;
+  @apply dark:text-zinc-100;
+}
+
+.title,
+.subtitle {
+  @apply font-bold;
+  @apply text-center;
+}
+
+.title {
+  @apply text-4xl;
+  @apply mt-8;
+}
+
+.subtitle {
+  @apply text-2xl;
+}
+
+.box {
+  @apply w-72;
+  @apply mx-auto;
+  @apply grid;
+  @apply grid-cols-4;
+  @apply gap-4;
+  @apply place-items-center;
+  @apply mt-8;
+}
+
+.box__box {
+  @apply w-full;
+  @apply h-20;
+  @apply col-span-full;
+  @apply bg-zinc-200;
+  @apply dark:bg-zinc-800;
+  @apply rounded-lg;
+  @apply px-2;
+  @apply relative;
+}
+
+.box__buffer {
+  @apply absolute;
+  @apply left-3;
+  @apply top-3;
+  @apply text-zinc-600;
+  @apply dark:text-zinc-400;
+  @apply flex;
+  @apply gap-x-2;
+}
+
+.box__display {
+  @apply absolute;
+  @apply right-2;
+  @apply bottom-2;
+  @apply text-5xl;
+  @apply leading-none;
+}
+
+.box__button {
+  @apply w-12;
+  @apply h-12;
+  @apply rounded-full;
+  @apply bg-slate-300;
+  @apply hover:bg-slate-400;
+  @apply text-slate-700;
+  @apply dark:bg-slate-700;
+  @apply dark:hover:bg-slate-800;
+  @apply dark:text-slate-300;
+  @apply transition-colors;
+}
