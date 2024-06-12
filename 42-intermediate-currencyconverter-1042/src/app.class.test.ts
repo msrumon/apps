@@ -27,7 +27,6 @@ describe('App', () => {
   });
 
   it('should output correct result (1)', () => {
-    console.log(app);
     app.amount = '123';
     app.from = 'USD';
     app.to = 'EUR';
